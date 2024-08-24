@@ -1,6 +1,7 @@
 name: Build on push tag
 # on: [workflow_dispatch]
 on:
+  workflow_dispatch:
   push:
     tags:
       - "v*.*.*"
@@ -14,8 +15,8 @@ jobs:
           - tag: "23.05.4"
             pkgarch: mipsel_24kc
             target: ramips
-            subtarget: mt7621
-            vermagic: "144de9e5c1a8813b724b14faa054d9f0"
+            subtarget: mt7620
+            vermagic: "5bc03255e08a37a54dbb31ad01735f42"
 
     steps:
       - uses: actions/checkout@v4
